@@ -1,0 +1,42 @@
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Roboto, serif;
+}
+
+.form-control {
+  margin: 5px;
+  padding: 3px;
+  width: 200px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.btn {
+  width: 80px;
+  border-radius: 10px;
+  border: 0;
+  padding: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  background-color: #e6e6e6;
+
+  &-remove {
+    width: 20px;
+    height: 20px;
+    line-height: 10px;
+    border-radius: 50%;
+    background-color: #727272;
+    color: #fbfbfb;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+}

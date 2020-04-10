@@ -1,0 +1,23 @@
+<form
+  class="form-group"
+  [formGroup]="addPaymentForm"
+  (ngSubmit)="addPayment()"
+>
+  <input
+    class="form-control"
+    formControlName="paymentName"
+    placeholder="Наименование платежа"
+  >
+  <input
+    class="form-control"
+    formControlName="price"
+    placeholder="Стоимость в месяц"
+  >
+  <button
+    class="btn"
+    type="submit"
+    [disabled]="!addPaymentForm.valid"
+  >
+    Добавить
+  </button>
+</form>

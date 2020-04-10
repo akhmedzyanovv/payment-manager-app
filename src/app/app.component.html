@@ -1,0 +1,13 @@
+<app-add-payment
+  (addPaymentEvent)="addPayment($event)"
+></app-add-payment>
+
+<app-payment-view
+  [paymentList$]="paymentList$"
+  (removePaymentEvent)="removePayment($event)"
+  (updatePaymentEvent)="updatePayment($event)"
+></app-payment-view>
+
+<app-total-price
+  [paymentList$]="paymentList$"
+></app-total-price>

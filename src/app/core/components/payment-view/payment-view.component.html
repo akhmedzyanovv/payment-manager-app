@@ -1,0 +1,33 @@
+<table>
+  <thead>
+    <tr>
+      <td>Наименование платежа</td>
+      <td>Стоимость</td>
+      <td *ngFor="let month of months">
+        {{month.label}}
+      </td>
+      <td>Удалить</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let paymentRow of (paymentList$ | async); trackBy: trackByFn"
+    >
+      <td>{{paymentRow.paymentName}}</td>
+      <td>{{paymentRow.price}}</td>
+      <td *ngFor="let month of months">
+        <input
+          type="checkbox"
+          [checked]="paymentRow.months[month.field]"
+          (click)="updateEvent(month.field, paymentRow)"
+        >
+      </td>
+      <td>
+        <button
+          class="btn btn-remove"
+          (click)="removeEvent(paymentRow.id)"
+        >x</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
