@@ -1,4 +1,4 @@
 export interface AddPayment {
   paymentName: string;
-  price: string;
+  pricePerDay: string;
 }

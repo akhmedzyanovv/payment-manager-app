@@ -3,7 +3,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AddPaymentComponent } from './add-payment.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DebugElement } from '@angular/core';
-import { By } from '@angular/platform-browser';
 
 describe('AddPaymentComponent', () => {
   let component: AddPaymentComponent;
@@ -36,7 +35,7 @@ describe('AddPaymentComponent', () => {
     expect(component.addPaymentForm.valid).toBeFalsy();
 
     component.addPaymentForm.controls['paymentName'].setValue('test');
-    component.addPaymentForm.controls['price'].setValue('2000');
+    component.addPaymentForm.controls['pricePerDay'].setValue('2000');
 
     expect(component.addPaymentForm.valid).toBeTruthy();
 
@@ -46,6 +45,6 @@ describe('AddPaymentComponent', () => {
 
     expect(addPaymentEventSpy).toHaveBeenCalled();
     expect(addPaymentEventSpy.calls.first().args[0].paymentName).toEqual('test');
-    expect(addPaymentEventSpy.calls.first().args[0].price).toEqual('2000');
+    expect(addPaymentEventSpy.calls.first().args[0].pricePerDay).toEqual('2000');
   });
 });

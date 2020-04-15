@@ -26,11 +26,11 @@ export class PaymentViewComponent {
     this.removePaymentEvent.emit(id);
   }
 
-  public trackByFn(index, item: Payment) {
+  public trackByFn(index, item: Payment): number {
     return item.id;
   }
 
-  public updateEvent(monthKey: string, payment: Payment) {
+  public updateEvent(monthKey: string, payment: Payment): void {
     payment.months[monthKey] = !payment.months[monthKey];
     this.updatePaymentEvent.emit({ ...payment });
   }

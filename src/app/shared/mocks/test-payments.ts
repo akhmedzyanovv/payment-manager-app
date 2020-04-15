@@ -18,7 +18,7 @@ export const PAYMENTS: Payment[] = [
       november: true,
       december: true
     },
-    price: 10,
+    pricePerDay: 10,
     lastChangesDate: new Date()
   },
   {
@@ -38,7 +38,7 @@ export const PAYMENTS: Payment[] = [
       november: false,
       december: true
     },
-    price: 20,
+    pricePerDay: 20,
     lastChangesDate: new Date()
   },
   {
@@ -58,7 +58,7 @@ export const PAYMENTS: Payment[] = [
       november: false,
       december: false
     },
-    price: 30,
+    pricePerDay: 30,
     lastChangesDate: new Date()
   },
 ];

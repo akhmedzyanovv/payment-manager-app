@@ -36,7 +36,7 @@ describe('PaymentStoreService', () => {
     service.addPayment(addPaymentData);
     service.getPaymentList().subscribe((payments: Payment[]) => {
       expect(payments[payments.length - 1].paymentName).toEqual(payment.paymentName);
-      expect(payments[payments.length - 1].price).toEqual(payment.price);
+      expect(payments[payments.length - 1].pricePerDay).toEqual(payment.pricePerDay);
       expect(payments[payments.length - 1].months).toEqual(payment.months);
       done();
     });

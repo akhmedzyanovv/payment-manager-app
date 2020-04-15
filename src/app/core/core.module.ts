@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PaymentStoreService } from './services/payment-store.service';
 import { PaymentViewComponent } from './components/payment-view/payment-view.component';
-import { CalculatePricePipe } from './pipe/calculate-price.pipe';
+import { RowPricePipe } from './pipe/row-price/row-price.pipe';
+import { TotalPricePipe } from './pipe/total-price/total-price.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
   ],
-  declarations: [PaymentViewComponent, CalculatePricePipe],
+  declarations: [
+    PaymentViewComponent,
+    TotalPricePipe,
+    RowPricePipe
+  ],
   exports: [
     PaymentViewComponent,
-    CalculatePricePipe
-  ],
-  providers: [
-    PaymentStoreService
+    TotalPricePipe,
+    RowPricePipe
   ]
 })
 export class CoreModule { }

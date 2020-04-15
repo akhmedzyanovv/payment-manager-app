@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MockPipe } from '../../mocks/MockPipe';
+import { MockTotalPipe } from '../../mocks/MockPipe';
 import { TotalPriceComponent } from './total-price.component';
 
 describe('TotalPriceComponent', () => {
@@ -8,7 +8,7 @@ describe('TotalPriceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TotalPriceComponent, MockPipe ]
+      declarations: [ TotalPriceComponent, MockTotalPipe ]
     })
     .compileComponents();
   }));

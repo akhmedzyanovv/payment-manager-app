@@ -22,7 +22,7 @@ export class AddPaymentComponent implements OnInit {
   private initForm(): void {
     this.addPaymentForm = new FormGroup({
       paymentName: new FormControl('', [Validators.required]),
-      price: new FormControl('', [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)])
+      pricePerDay: new FormControl('', [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)])
     });
   }
 

@@ -6,11 +6,20 @@ export function getPaymentObject(addPaymentData: AddPayment, id: number): Paymen
     id,
     paymentName: addPaymentData.paymentName,
     months: { ...DEFAULT_MONTH_STATUS},
-    price: Number(addPaymentData.price),
+    pricePerDay: Number(addPaymentData.pricePerDay),
     lastChangesDate: new Date()
   };
 }
 
-export function calculatePaymentRowPrice(payment: Payment): number {
-  return Object.values(payment.months).reduce((acc: number, currentMonth: boolean) => currentMonth ? acc + payment.price : acc, 0);
+export function getCountOfDaysInRow(payment: Payment): number {
+  return Object.values(payment.months).reduce((acc: number, currentMonth: boolean, index: number) => {
+    if (!currentMonth) {
+      return acc;
+    }
+
+    const currentDate = new Date();
+    const numberOfDaysAtMonth = new Date(currentDate.getFullYear(), ++index, 0).getDate();
+
+    return acc + payment.pricePerDay * numberOfDaysAtMonth;
+  }, 0);
 }

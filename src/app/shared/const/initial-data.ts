@@ -1,34 +1,34 @@
 import { AddPayment, Payment } from '../models';
 
 export const INITIAL_ADD_DATA: AddPayment[] = [
-    {
-        paymentName: 'Интернет',
-        price: '600',
-    },
-    {
-        paymentName: 'Домашний телефон',
-        price: '500',
-    },
-    {
-        paymentName: 'Мобильный телефон',
-        price: '300',
-    },
-    {
-        paymentName: 'IPTV',
-        price: '200',
-    },
-    {
-        paymentName: 'Подписка на музыку',
-        price: '150',
-    },
-    {
-        paymentName: 'Подписка на фильмы',
-        price: '150',
-    },
-    {
-        paymentName: 'Абонемент на фитнес',
-        price: '1000',
-    },
+  {
+    paymentName: 'Интернет',
+    pricePerDay: '600',
+  },
+  {
+    paymentName: 'Домашний телефон',
+    pricePerDay: '500',
+  },
+  {
+    paymentName: 'Мобильный телефон',
+    pricePerDay: '300',
+  },
+  {
+    paymentName: 'IPTV',
+    pricePerDay: '200',
+  },
+  {
+    paymentName: 'Подписка на музыку',
+    pricePerDay: '150',
+  },
+  {
+    paymentName: 'Подписка на фильмы',
+    pricePerDay: '150',
+  },
+  {
+    paymentName: 'Абонемент на фитнес',
+    pricePerDay: '1000',
+  },
 ];
 
 export const INITIAL_PAYMENTS: Payment[] = [
@@ -49,7 +49,7 @@ export const INITIAL_PAYMENTS: Payment[] = [
       november: false,
       december: false,
     },
-    price: 600,
+    pricePerDay: 600,
     lastChangesDate: new Date(),
   },
   {
@@ -69,7 +69,7 @@ export const INITIAL_PAYMENTS: Payment[] = [
       november: false,
       december: false,
     },
-    price: 500,
+    pricePerDay: 500,
     lastChangesDate: new Date(),
   },
   {
@@ -89,7 +89,7 @@ export const INITIAL_PAYMENTS: Payment[] = [
       november: false,
       december: false,
     },
-    price: 300,
+    pricePerDay: 300,
     lastChangesDate: new Date(),
   },
   {
@@ -109,7 +109,7 @@ export const INITIAL_PAYMENTS: Payment[] = [
       november: false,
       december: false,
     },
-    price: 200,
+    pricePerDay: 200,
     lastChangesDate: new Date(),
   },
   {
@@ -129,7 +129,7 @@ export const INITIAL_PAYMENTS: Payment[] = [
       november: false,
       december: false,
     },
-    price: 150,
+    pricePerDay: 150,
     lastChangesDate: new Date(),
   },
   {
@@ -149,7 +149,7 @@ export const INITIAL_PAYMENTS: Payment[] = [
       november: false,
       december: false,
     },
-    price: 150,
+    pricePerDay: 150,
     lastChangesDate: new Date(),
   },
   {
@@ -169,7 +169,7 @@ export const INITIAL_PAYMENTS: Payment[] = [
       november: false,
       december: false,
     },
-    price: 1000,
+    pricePerDay: 1000,
     lastChangesDate: new Date(),
   }
 ];

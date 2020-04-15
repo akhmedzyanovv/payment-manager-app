@@ -48,7 +48,7 @@ describe('AppComponent', () => {
 
     const addPaymentData: AddPayment = {
       paymentName: 'test',
-      price: '2000',
+      pricePerDay: '2000',
     };
 
     component.addPayment(addPaymentData);

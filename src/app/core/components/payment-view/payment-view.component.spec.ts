@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 import { of } from 'rxjs';
 import { PAYMENTS } from '../../../shared/mocks/test-payments';
 import { By } from '@angular/platform-browser';
+import { MockRowPipe } from '../../../shared/mocks/MockPipe';
 
 describe('PaymentViewComponent', () => {
   let component: PaymentViewComponent;
@@ -13,7 +14,7 @@ describe('PaymentViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaymentViewComponent ]
+      declarations: [ PaymentViewComponent, MockRowPipe ]
     })
     .compileComponents();
 
